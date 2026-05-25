@@ -10,26 +10,26 @@
     "seed": "npx tsx scripts/seed.ts"
   },
   "dependencies": {
-    "@supabase/ssr": "^0.10.3",
-    "@supabase/supabase-js": "^2.106.2",
-    "clsx": "^2.1.1",
-    "date-fns": "^4.1.0",
-    "framer-motion": "^11.15.0",
-    "html5-qrcode": "^2.3.8",
     "next": "15.1.0",
-    "qrcode": "^1.5.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@supabase/supabase-js": "^2.47.2",
+    "framer-motion": "^11.15.0",
+    "qrcode": "^1.5.4",
+    "html5-qrcode": "^2.3.8",
+    "date-fns": "^4.1.0",
+    "clsx": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "^22",
-    "@types/qrcode": "^1.5.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "autoprefixer": "^10",
-    "postcss": "^8",
+    "@types/qrcode": "^1.5.5",
+    "typescript": "^5",
     "tailwindcss": "^3.4.17",
-    "tsx": "^4.19.2",
-    "typescript": "^5"
+    "postcss": "^8",
+    "autoprefixer": "^10",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.19.2"
   }
 }
