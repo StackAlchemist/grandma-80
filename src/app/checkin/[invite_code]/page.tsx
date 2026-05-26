@@ -1,19 +1,19 @@
 'use client'
 
-import { useEffect, useState, use } from 'react'
+import { useEffect, useState } from 'react'
+import { useParams } from 'next/navigation'
 import { CheckInSuccess } from '@/components/checkin/CheckInSuccess'
 import { CheckInError } from '@/components/checkin/CheckInError'
 import type { CheckInResult } from '@/types'
 
-interface Props {
-  params: Promise<{ invite_code: string }>
-}
-
-export default function CheckInPage({ params }: Props) {
-  const { invite_code } = use(params)
+export default function CheckInPage() {
+  const params = useParams()
+  const invite_code = params.invite_code as string
   const [result, setResult] = useState<CheckInResult | null>(null)
 
   useEffect(() => {
+    if (!invite_code) return
+
     fetch('/api/checkin', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -30,7 +30,6 @@ export default function CheckInPage({ params }: Props) {
       )
   }, [invite_code])
 
-  // Loading
   if (!result) {
     return (
       <div className="min-h-screen bg-obsidian flex items-center justify-center px-4 font-body">
