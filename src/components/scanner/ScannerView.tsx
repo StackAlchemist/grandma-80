@@ -81,7 +81,7 @@ export function ScannerView() {
 
     setScannedCode(code)
     setStatus('found')
-    setTimeout(() => router.push(`/checkin/${code}`), 600)
+    setTimeout(() => router.push(`/scanner`), 600)
   }
 
   async function retry() {
