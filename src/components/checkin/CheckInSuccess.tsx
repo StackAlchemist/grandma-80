@@ -40,9 +40,9 @@ export function CheckInSuccess({ invitation }: Props) {
         <h1 className="font-display text-4xl text-emerald-300 mb-2">
           {invitation.guest_name}
         </h1>
-        <p className="font-body text-sm text-gold-400 mt-3">
+        {/* <p className="font-body text-sm text-gold-400 mt-3">
           {invitation.table_number}
-        </p>
+        </p> */}
 
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-800/50 to-transparent mt-8 mb-6" />
 

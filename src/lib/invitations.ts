@@ -75,6 +75,6 @@ export async function performCheckIn(inviteCode: string): Promise<CheckInResult>
   return {
     success: true,
     invitation: data as Invitation,
-    message: `Welcome, ${data.guest_name}! Your table is ready.`,
+    message: `Welcome, ${data.guest_name}!`,
   }
 }

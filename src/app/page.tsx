@@ -125,7 +125,7 @@ export default function LandingPage() {
           className="mt-14 flex flex-col sm:flex-row gap-4"
         >
           <Link
-            href="/invite/k9x221"
+            href="/invite/h6j329"
             className="group relative px-10 py-4 bg-gold-500 text-obsidian font-body text-xs tracking-[0.3em] uppercase font-semibold hover:bg-gold-400 transition-all duration-300 overflow-hidden"
           >
             <span className="relative z-10">View Sample Invite</span>

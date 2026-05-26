@@ -101,10 +101,10 @@ export function InviteCard({ invitation, checkInUrl }: Props) {
               Dear
             </p>
             <p className="font-display text-3xl sm:text-4xl text-ivory/95">{invitation.guest_name}</p>
-            <div className="mt-3 inline-flex items-center gap-2 px-4 py-1.5 border border-gold-500/30 bg-gold-500/5">
+            {/* <div className="mt-3 inline-flex items-center gap-2 px-4 py-1.5 border border-gold-500/30 bg-gold-500/5">
               <span className="text-gold-400/60 text-[10px] uppercase tracking-widest">Table</span>
               <span className="text-gold-400 font-display text-lg">{invitation.table_number}</span>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Event details */}
@@ -171,7 +171,7 @@ export function InviteCard({ invitation, checkInUrl }: Props) {
           </motion.div>
 
           {/* Google Maps */}
-          <motion.div variants={stagger.item}>
+          {/* <motion.div variants={stagger.item}>
             <a
               href={EVENT_CONFIG.googleMapsUrl}
               target="_blank"
@@ -183,7 +183,7 @@ export function InviteCard({ invitation, checkInUrl }: Props) {
               </svg>
               Get Directions
             </a>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* Footer note */}
