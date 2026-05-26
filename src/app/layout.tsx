@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`} data-scroll-behavior="smooth">
       <body className="bg-obsidian text-ivory antialiased">
         {children}
       </body>
