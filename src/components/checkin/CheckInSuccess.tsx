@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { EVENT_CONFIG } from '@/lib/config'
 import type { Invitation } from '@/types'
 
@@ -9,13 +10,27 @@ interface Props {
   invitation: Invitation
 }
 
+const AUTO_REDIRECT_SECONDS = 5
+
 export function CheckInSuccess({ invitation }: Props) {
+  const router = useRouter()
   const [showConfetti, setShowConfetti] = useState(false)
+  const [countdown, setCountdown] = useState(AUTO_REDIRECT_SECONDS)
 
   useEffect(() => {
-    const t = setTimeout(() => setShowConfetti(true), 300)
-    return () => clearTimeout(t)
+    const confettiTimer = setTimeout(() => setShowConfetti(true), 300)
+    return () => clearTimeout(confettiTimer)
   }, [])
+
+  // Countdown then auto-redirect to scanner
+  useEffect(() => {
+    if (countdown <= 0) {
+      router.push('/scanner')
+      return
+    }
+    const id = setTimeout(() => setCountdown(c => c - 1), 1000)
+    return () => clearTimeout(id)
+  }, [countdown, router])
 
   const checkedInAt = invitation.checked_in_at
     ? new Date(invitation.checked_in_at).toLocaleTimeString('en-NG', {
@@ -77,9 +92,6 @@ export function CheckInSuccess({ invitation }: Props) {
             className="w-20 h-20 rounded-full border-2 border-emerald-400/70 flex items-center justify-center mx-auto mb-8 bg-emerald-950/40"
           >
             <motion.svg
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
               className="w-8 h-8 text-emerald-400"
               fill="none"
               viewBox="0 0 24 24"
@@ -139,16 +151,28 @@ export function CheckInSuccess({ invitation }: Props) {
             )}
           </motion.div>
 
-          <div className="h-px bg-gradient-to-r from-transparent via-emerald-800/50 to-transparent mt-8" />
+          <div className="h-px bg-gradient-to-r from-transparent via-emerald-800/50 to-transparent mt-8 mb-6" />
 
-          <motion.p
+          {/* Actions */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="font-display italic text-gold-400/40 text-sm mt-6"
+            transition={{ delay: 0.8, duration: 0.6 }}
+            className="space-y-3"
           >
-            &ldquo;Enjoy the evening.&rdquo;
-          </motion.p>
+            {/* Scan next — primary */}
+            <button
+              onClick={() => router.push('/scanner')}
+              className="w-full py-3 bg-gold-500 hover:bg-gold-400 text-obsidian font-body text-xs tracking-[0.3em] uppercase font-semibold transition-colors duration-300"
+            >
+              Scan Next Guest
+            </button>
+
+            {/* Auto-redirect countdown */}
+            <p className="font-body text-[10px] text-ivory/25 tracking-widest">
+              Returning to scanner in {countdown}s
+            </p>
+          </motion.div>
         </div>
       </motion.div>
     </div>
