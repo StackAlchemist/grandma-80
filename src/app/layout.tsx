@@ -18,11 +18,11 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'An Evening of Elegance — Private Invitation',
+  title: 'Margaret Olusola Odusoga JP. @ 80',
   description: 'You are cordially invited to a celebration of love, family, and timeless memories.',
   openGraph: {
     title: 'You Have Been Invited',
-    description: 'A private evening of elegance awaits you.',
+    description: 'Private Invitation Page',
     type: 'website',
   },
 }

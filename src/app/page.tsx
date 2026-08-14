@@ -102,7 +102,7 @@ export default function LandingPage() {
           variants={fadeUp}
           className="font-display text-4xl md:text-5xl text-gold-300 italic mb-12"
         >
-          Mama Grace
+        Mrs Margaret Olusola Odusoga JP.
         </motion.p>
 
         <motion.p
