@@ -93,7 +93,7 @@ export function InviteCard({ invitation, checkInUrl }: Props) {
           {/* Directions */}
           <motion.div variants={stagger.item}>
             <a
-              href={EVENT_CONFIG.googleMapsUrl}
+              href={"https://maps.app.goo.gl/ii1hupZurKsLGWkg7?g_st=ic"}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 w-full py-4 border border-gold-500/25 hover:border-gold-500/60 text-gold-400/70 hover:text-gold-300 transition-all duration-300 font-body text-xs tracking-widest uppercase"
