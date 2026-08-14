@@ -19,7 +19,7 @@ export const EVENT_CONFIG = {
 
   googleMapsUrl:
     process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL ??
-    'https://maps.google.com/?q=Vogue+Events+Center+Ebute+Metta+Lagos',
+    'https://maps.app.goo.gl/ii1hupZurKsLGWkg7?g_st=ic',
 
   appUrl:
     process.env.NEXT_PUBLIC_APP_URL ??
