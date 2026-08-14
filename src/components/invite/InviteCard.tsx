@@ -60,7 +60,7 @@ export function InviteCard({ invitation, checkInUrl }: Props) {
               {invitation.guest_name}
             </p>
             <p className="font-display italic text-gold-400/70 text-lg mt-2">
-              You are warmly welcome to the birthday celebration of {EVENT_CONFIG.celebrantName}.
+              You are warmly welcome to the birthday celebration of {EVENT_CONFIG.celebrantName}..
             </p>
           </motion.div>
 
