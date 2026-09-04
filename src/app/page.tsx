@@ -49,12 +49,20 @@ export default function LandingPage() {
         <div className="font-display text-gold-400 tracking-[0.3em] text-sm uppercase">
           Grandma@80
         </div>
-        <Link
-          href="/scanner"
-          className="font-body text-xs tracking-widest uppercase text-gold-400/60 hover:text-gold-400 transition-colors duration-300 border border-gold-500/20 hover:border-gold-500/50 px-4 py-2"
-        >
-          Staff Scanner →
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/find"
+            className="font-body text-xs tracking-widest uppercase text-gold-300 hover:text-gold-200 transition-colors duration-300 border border-gold-500/40 hover:border-gold-500/80 px-4 py-2 bg-gold-500/10"
+          >
+            Find My Invitation
+          </Link>
+          <Link
+            href="/scanner"
+            className="font-body text-xs tracking-widest uppercase text-gold-400/60 hover:text-gold-400 transition-colors duration-300 border border-gold-500/20 hover:border-gold-500/50 px-4 py-2"
+          >
+            Staff Scanner →
+          </Link>
+        </div>
       </motion.header>
 
       {/* Hero */}
@@ -125,10 +133,10 @@ export default function LandingPage() {
           className="mt-14 flex flex-col sm:flex-row gap-4"
         >
           <Link
-            href="/invite/h6j329"
+            href="/find"
             className="group relative px-10 py-4 bg-gold-500 text-obsidian font-body text-xs tracking-[0.3em] uppercase font-semibold hover:bg-gold-400 transition-all duration-300 overflow-hidden"
           >
-            <span className="relative z-10">View Sample Invite</span>
+            <span className="relative z-10">Find My Invitation</span>
             <div className="absolute inset-0 bg-gold-300 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
           </Link>
           <Link
@@ -231,10 +239,28 @@ export default function LandingPage() {
         <p className="font-display italic text-gold-400/40 text-sm">
           &ldquo;Some celebrations are meant to be remembered forever.&rdquo;
         </p>
-        <p className="font-body text-ivory/20 text-xs mt-4 tracking-widest uppercase">
-          Luxe Invite · Private Event System
-        </p>
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-ivory/30 font-body text-[11px] tracking-widest uppercase">
+          <span>
+            Designed & Powered by{' '}
+            <a
+              href="https://wa.me/2348076808189"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-400/80 hover:text-gold-300 transition-colors underline decoration-gold-500/30 underline-offset-4"
+            >
+              Seraph Technologies
+            </a>
+          </span>
+          <span className="hidden sm:inline text-gold-500/30">·</span>
+          <a
+            href="tel:+2348076808189"
+            className="text-ivory/40 hover:text-gold-400/80 transition-colors tracking-wider"
+          >
+            +234 807 680 8189
+          </a>
+        </div>
       </footer>
     </main>
   )
 }
+

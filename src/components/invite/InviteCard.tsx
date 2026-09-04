@@ -107,14 +107,27 @@ export function InviteCard({ invitation, checkInUrl }: Props) {
         </motion.div>
 
         {/* Footer */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
-          className="font-body text-[10px] text-ivory/20 text-center mt-8 tracking-widest uppercase"
+          className="text-center mt-8 space-y-1.5"
         >
-          {EVENT_CONFIG.rsvpNote}
-        </motion.p>
+          <p className="font-body text-[10px] text-ivory/20 tracking-widest uppercase">
+            {EVENT_CONFIG.rsvpNote}
+          </p>
+          <p className="font-body text-[9px] text-ivory/20 tracking-widest uppercase">
+            Digital Pass by{' '}
+            <a
+              href="https://wa.me/2348076808189"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-500/50 hover:text-gold-400 transition-colors"
+            >
+              Seraph Technologies
+            </a>
+          </p>
+        </motion.div>
       </div>
     </div>
   )

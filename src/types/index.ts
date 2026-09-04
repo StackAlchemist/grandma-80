@@ -17,3 +17,31 @@ export interface CheckInResult {
 }
 
 export type InviteStatus = 'valid' | 'used' | 'not_found'
+
+export interface SearchResult {
+  invite_code: string
+  guest_name: string
+  masked_phone?: string | null
+}
+
+export interface FindResponse {
+  success: boolean
+  count: number
+  invitations: SearchResult[]
+  message?: string
+}
+
+export interface AdminStats {
+  total: number
+  checkedIn: number
+  remaining: number
+  percentage: number
+}
+
+export interface AdminDashboardData {
+  stats: AdminStats
+  recentCheckIns: Invitation[]
+  lastUpdated: string
+}
+
+

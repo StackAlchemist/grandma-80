@@ -183,6 +183,19 @@ export function ScannerView() {
             Hold QR code steady in view — scan is automatic
           </p>
         )}
+
+        <p className="font-body text-[9px] text-ivory/20 text-center tracking-wider">
+          Technical Support:{' '}
+          <a
+            href="https://wa.me/2348076808189"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold-500/50 hover:text-gold-400 transition-colors"
+          >
+            Seraph Technologies
+          </a>{' '}
+          (<a href="tel:+2348076808189" className="hover:text-gold-400 transition-colors">+234 807 680 8189</a>)
+        </p>
       </div>
 
       <style>{`
